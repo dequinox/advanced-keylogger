@@ -1,0 +1,81 @@
+In file included from /home/doro/Documents/Learn/Advanced Keylogger/main.cpp:4:0:
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:14:12: error: ‘function’ in namespace ‘std’ does not name a template type
+       std::function<void(void)> func = nullptr;
+            ^~~~~~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:38:30: error: ‘function’ in namespace ‘std’ does not name a template type
+             Timer(const std::function<void(void)> &f) : func(f) {}
+                              ^~~~~~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:38:38: error: expected ‘,’ or ‘...’ before ‘<’ token
+             Timer(const std::function<void(void)> &f) : func(f) {}
+                                      ^
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:40:30: error: ‘function’ in namespace ‘std’ does not name a template type
+             Timer(const std::function<void(void)> &f,
+                              ^~~~~~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:40:38: error: expected ‘,’ or ‘...’ before ‘<’ token
+             Timer(const std::function<void(void)> &f,
+                                      ^
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:40:13: error: ‘Timer::Timer(int)’ cannot be overloaded
+             Timer(const std::function<void(void)> &f,
+             ^~~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:38:13: error: with ‘Timer::Timer(int)’
+             Timer(const std::function<void(void)> &f) : func(f) {}
+             ^~~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:65:41: error: ‘function’ in namespace ‘std’ does not name a template type
+             void SetFunction(const std::function<void(void)> &f)
+                                         ^~~~~~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:65:49: error: expected ‘,’ or ‘...’ before ‘<’ token
+             void SetFunction(const std::function<void(void)> &f)
+                                                 ^
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:104:24: error: ‘function’ in namespace ‘std’ does not name a template type
+             const std::function<void(void)> &Function() const
+                        ^~~~~~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h: In member function ‘void Timer::SleepAndRun()’:
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:20:19: error: ‘Function’ was not declared in this scope
+                   Function()();
+                   ^~~~~~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:20:19: note: suggested alternative: ‘SetFunction’
+                   Function()();
+                   ^~~~~~~~
+                   SetFunction
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h: In constructor ‘Timer::Timer(int)’:
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:38:57: error: class ‘Timer’ does not have any field named ‘func’
+             Timer(const std::function<void(void)> &f) : func(f) {}
+                                                         ^~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:38:62: error: ‘f’ was not declared in this scope
+             Timer(const std::function<void(void)> &f) : func(f) {}
+                                                              ^
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h: In constructor ‘Timer::Timer(int)’:
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:43:25: error: class ‘Timer’ does not have any field named ‘func’
+                       : func(f),
+                         ^~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:43:30: error: ‘f’ was not declared in this scope
+                       : func(f),
+                              ^
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:44:60: error: ‘i’ was not declared in this scope
+                         interval(std::chrono::milliseconds(i)),
+                                                            ^
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:45:36: error: ‘repeat’ was not declared in this scope
+                         CallNumber(repeat) {}
+                                    ^~~~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:45:36: note: suggested alternative: ‘renameat’
+                         CallNumber(repeat) {}
+                                    ^~~~~~
+                                    renameat
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h: In member function ‘void Timer::Start(bool)’:
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:54:62: error: invalid use of non-static member function ‘void Timer::ThreadFunc()’
+                         Thread = std::thread(ThreadFunc, this);
+                                                              ^
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:23:12: note: declared here
+       void ThreadFunc()
+            ^~~~~~~~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h: In member function ‘void Timer::SetFunction(int)’:
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:67:19: error: ‘func’ was not declared in this scope
+                   func = f;
+                   ^~~~
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:67:19: note: suggested alternative: ‘fputc’
+                   func = f;
+                   ^~~~
+                   fputc
+/home/doro/Documents/Learn/Advanced Keylogger/Timer.h:67:26: error: ‘f’ was not declared in this scope
+                   func = f;
+                          ^
